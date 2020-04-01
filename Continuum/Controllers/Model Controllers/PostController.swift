@@ -12,14 +12,14 @@ import UIKit
 class PostController {
     
     //MARK: - Shared instance and singleton
-    let shared = PostController()
+    static let shared = PostController()
     var posts: [Post] = []
     
     
     //MARK: - CRUD
     
-    func addComment(text: String, post: Post, completion: @escaping (Result<Comment?, PostError>) -> Void) {
-        
+    func addComment(text: String, post: Post?, completion: @escaping (Result<Comment?, PostError>) -> Void) {
+        guard let post = post else { return }
         let comment = Comment(text: text, post: post)
         post.comments.append(comment)
         completion(.success(comment))
@@ -32,5 +32,4 @@ class PostController {
         self.posts.append(post)
         completion(.success(post))
     }
-    
 }

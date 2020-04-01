@@ -16,6 +16,7 @@
 		342293A62433E85C00BCB762 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342293A52433E85C00BCB762 /* PostController.swift */; };
 		342293A82433E94300BCB762 /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342293A72433E94300BCB762 /* PostError.swift */; };
 		342293AA2433ED0900BCB762 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342293A92433ED0900BCB762 /* PostTableViewCell.swift */; };
+		342293AC2433F92900BCB762 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342293AB2433F92900BCB762 /* DateExtension.swift */; };
 		F7F99C392211F96400D13C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F99C382211F96400D13C4C /* AppDelegate.swift */; };
 		F7F99C3E2211F96400D13C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3C2211F96400D13C4C /* Main.storyboard */; };
 		F7F99C402211F96600D13C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3F2211F96600D13C4C /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		342293A52433E85C00BCB762 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		342293A72433E94300BCB762 /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
 		342293A92433ED0900BCB762 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		342293AB2433F92900BCB762 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		F7F99C352211F96400D13C4C /* Continuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F99C382211F96400D13C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7F99C3D2211F96400D13C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				342293A72433E94300BCB762 /* PostError.swift */,
+				342293AB2433F92900BCB762 /* DateExtension.swift */,
 			);
 			path = "Helpers + extensions";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F99C392211F96400D13C4C /* AppDelegate.swift in Sources */,
+				342293AC2433F92900BCB762 /* DateExtension.swift in Sources */,
 				342293A42433E4B000BCB762 /* Comment.swift in Sources */,
 				342293A82433E94300BCB762 /* PostError.swift in Sources */,
 				3422939C2433E34300BCB762 /* PostListTableViewController.swift in Sources */,
