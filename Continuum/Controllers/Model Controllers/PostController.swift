@@ -16,6 +16,7 @@ class PostController {
     var posts: [Post] = []
     
     
+    
     //MARK: - CRUD
     
     func addComment(text: String, post: Post?, completion: @escaping (Result<Comment?, PostError>) -> Void) {
@@ -23,7 +24,7 @@ class PostController {
         let comment = Comment(text: text, post: post)
         post.comments.append(comment)
         completion(.success(comment))
-        
+
     }
     
     func createPostWith(image: UIImage, caption: String, completion: @escaping (Result<Post?, PostError>) -> Void) {

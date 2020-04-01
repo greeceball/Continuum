@@ -17,6 +17,7 @@
 		342293A82433E94300BCB762 /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342293A72433E94300BCB762 /* PostError.swift */; };
 		342293AA2433ED0900BCB762 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342293A92433ED0900BCB762 /* PostTableViewCell.swift */; };
 		342293AC2433F92900BCB762 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342293AB2433F92900BCB762 /* DateExtension.swift */; };
+		34BE99D92435338300F47AF6 /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BE99D82435338300F47AF6 /* SearchableRecord.swift */; };
 		F7F99C392211F96400D13C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F99C382211F96400D13C4C /* AppDelegate.swift */; };
 		F7F99C3E2211F96400D13C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3C2211F96400D13C4C /* Main.storyboard */; };
 		F7F99C402211F96600D13C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3F2211F96600D13C4C /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		342293A72433E94300BCB762 /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
 		342293A92433ED0900BCB762 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		342293AB2433F92900BCB762 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		34BE99D82435338300F47AF6 /* SearchableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchableRecord.swift; path = Model/SearchableRecord.swift; sourceTree = "<group>"; };
 		F7F99C352211F96400D13C4C /* Continuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F99C382211F96400D13C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7F99C3D2211F96400D13C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		F7F99C372211F96400D13C4C /* Continuum */ = {
 			isa = PBXGroup;
 			children = (
+				34BE99D82435338300F47AF6 /* SearchableRecord.swift */,
 				342293962433D94400BCB762 /* Controllers */,
 				342293952433D94000BCB762 /* View */,
 				342293942433D93900BCB762 /* Model */,
@@ -240,6 +243,7 @@
 				3422939E2433E39F00BCB762 /* PostDetailTableViewController.swift in Sources */,
 				342293A22433E4A800BCB762 /* Post.swift in Sources */,
 				342293AA2433ED0900BCB762 /* PostTableViewCell.swift in Sources */,
+				34BE99D92435338300F47AF6 /* SearchableRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
