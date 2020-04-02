@@ -38,6 +38,10 @@ class PostDetailTableViewController: UITableViewController {
     }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
+        guard let caption = post?.caption, let photo = post?.photo else { return }
+            let shareActivity = UIActivityViewController(activityItems: [caption, photo], applicationActivities: nil)
+            present(shareActivity, animated: true)
+        
     }
     
     @IBAction func followButtonTapped(_ sender: Any) {
@@ -79,7 +83,7 @@ class PostDetailTableViewController: UITableViewController {
     func setupViews() {
         //self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to See New Comments")
         //self.refreshControl.addTarget(self, action: #selector(self.tableView.reloadData), for:  .valueChanged)
-       // self.refreshControl.addSubview(refreshControl)
+        // self.refreshControl.addSubview(refreshControl)
     }
     
     func updateViews() {
