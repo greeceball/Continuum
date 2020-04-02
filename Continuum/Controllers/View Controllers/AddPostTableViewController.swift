@@ -8,35 +8,34 @@
 
 import UIKit
 
-class AddPostTableViewController: UITableViewController {
+
+
+
+class AddPostTableViewController: UITableViewController, PhotoSelectorViewControllerDelegate {
     
     
     
     //MARK: - Outlets
     
-    @IBOutlet weak var selectImageButton: UIButton!
-    @IBOutlet weak var addCaptionTextField: UITextField!
-    @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var addCaptionTextField: UITextField!
+    
+    var selectedImage: UIImage?
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addCaptionTextField.autocapitalizationType = .sentences
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.selectImageButton.setTitle("Select Image", for: .normal)
+        
         addCaptionTextField.text = nil
-        photoImageView.image = nil
+        
     }
     //MARK: - Actions
-    @IBAction func selectImageButtonTapped(_ sender: Any) {
-        
-        photoImageView.image = #imageLiteral(resourceName: "spaceEmptyState")
-        selectImageButton.setTitle("", for: .normal)
-        
-        
-    }
+
     
     @IBAction func addPostButtonTapped(_ sender: Any) {
         createPost()
@@ -50,13 +49,26 @@ class AddPostTableViewController: UITableViewController {
     
 
     func createPost() {
-        guard let image = photoImageView.image, let caption = addCaptionTextField.text else { return }
+        guard let image = selectedImage, let caption = addCaptionTextField.text else { return }
         PostController.shared.createPostWith(image: image, caption: caption) { (post) in
             
         }
         tabBarController?.selectedIndex = 0
 
-        //navigationController?.popViewController(animated: true)
     }
     
+//MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toChildView" {
+            guard let destinationVC = segue.destination as? PhotoSelectorViewController else { return }
+            destinationVC.photoSelectorVCDelegate = self
+        }
+    }
+    
+}
+
+extension AddPostTableViewController: UIImagePickerControllerDelegate {
+    func photoSelectorViewControllerSelected(image: UIImage) {
+        selectedImage = image
+    }
 }
